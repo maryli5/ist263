@@ -13,11 +13,28 @@ p, ul, table{
     color: #edafb8;
 }
 
-
 a {
     color: #FF6600; 
 }
 
 a:hover {
     color: #CC3300;
+}
+
+nav {
+    background-color: #5858eb; 
+    padding: 10px; 
+    text-align: center; 
+}
+
+nav a {
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold; 
+    padding: 0 10px; 
+}
+
+nav a:hover {
+    color: #FFB400; 
+    text-decoration: underline;
 }
