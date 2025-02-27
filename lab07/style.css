@@ -1,9 +1,17 @@
+h1, h2{
+    color: #bbd0ff;
+}
+
 body {
     background-color: #0077b6;
 }
 
 p, ul{
     color: #edafb8;
+}
+
+table{
+    color: #fcf6bd;
 }
 
 a {
