@@ -1,8 +1,8 @@
 head{
-    color: #ffccd5;
+    color: #450920;
 }
 h1, h2{
-    color: #bbd0ff;
+    color: #8c2f39;
 }
 
 body {
@@ -22,7 +22,7 @@ a:hover {
 }
 
 nav {
-    background-color: #5858eb; 
+    background-color: #1e6091; 
     padding: 10px; 
     text-align: center; 
     margin-bottom: 30px;
