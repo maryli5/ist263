@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Contact</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Contact</h1>
+        <p>727 South Crouse Ave</p>
+        <p>Syracuse, NY 13244</p>
+        <p><a href="mailto:jli499@syr.edu">jli499@syr.edu </a></p>
+        <img src="../images/LI-In-Bug.png" alt ="LinkedIn picture" style="width: 50px; height: auto;">
+        <a href="https://www.linkedin.com/in/mary-li-ba77b02ab" target="_blank">My LinkedIn Profile</a>
+        <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.968798924845!2d-76.1384999237286!3d43.04208797113754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f3570d9dfc1f%3A0x9bbc6e8944894be8!2s727%20S%20Crouse%20Ave%2C%20Syracuse%2C%20NY%2013210!5e0!3m2!1sen!2sus!4v1738273164821!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+        <form action="https://formspree.io/f/mzzdvrzl" method ="POST">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br><br>
+            <p>How do you want to contact with me?(type more in the text box):</p>
+            <input type="checkbox" id="type1" name="type1" value="Offline">
+            <label for="type1"> Meet offline on the address in contact</label><br>
+            <input type="checkbox" id="type2" name="type2" value="LinkedIn">
+            <label for="type2"> Text message on LinkedIn</label><br>
+            <input type="checkbox" id="type3" name="type3" value="Email">
+            <label for="type3"> Communicate through email</label><br>
+            <label for="message">Your Message:</label><br>
+            <textarea id="message" name="message" rows="5" cols="40" required></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+    </body>
+</html>
