@@ -4,7 +4,7 @@
     <title>Skills</title>
     <style>
         body {
-            background-color: #5d8484; /* Matching background */
+            background-color: #ffffff; /* White background */
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -25,39 +25,41 @@
             max-width: 80%;
             margin: 0 auto;
             padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-        .content {
-            flex: 1;
+            text-align: center;
         }
         h1 {
-            text-align: left;
             color: black;
             margin-bottom: 10px;
         }
         p {
-            text-align: left;
             font-size: 16px;
             color: black;
-            margin-bottom: 30px; /* Adds spacing between text and icons */
+            margin-bottom: 30px;
+            max-width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .skills-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         .skills-container {
             display: flex;
-            justify-content: flex-start; /* Align to the left */
+            justify-content: center;
             gap: 50px;
             flex-wrap: wrap;
-            margin-bottom: 30px; /* Adds space before "Other Skills" box */
+            margin-bottom: 30px;
+            flex: 1;
         }
         .skill {
             text-align: center;
         }
         .skill img {
-            width: 60px; /* Adjust icon size */
+            width: 50px;
             height: auto;
         }
-        /* Positioning "Other Skills" Box */
+        /* "Other Skills" Box */
         .other-skills {
             width: 250px;
             background-color: #2c3e64; /* Dark blue */
@@ -65,7 +67,7 @@
             padding: 15px;
             border-radius: 10px;
             text-align: left;
-            margin-left: 30px; /* Moves box to the right */
+            margin-left: 50px; /* Moves box to the right */
         }
         .other-skills h2 {
             color: white;
@@ -94,48 +96,47 @@
     </nav>
 
     <div class="container">
-        <!-- Left Content: Icons and Text -->
-        <div class="content">
-            <h1>Technical Skills</h1>
+        <h1>Technical Skills</h1>
 
-            <p>My career has been focused on web development, and I’ve consistently learned new frameworks and languages as the web technologies have changed. Below are my core skills.</p>
+        <p>My career has been focused on web development, and I’ve consistently learned new frameworks and languages as the web technologies have changed. Below are my core skills.</p>
 
+        <div class="skills-wrapper">
             <div class="skills-container">
                 <div class="skill">
-                    <img src="https://cdn-icons-png.flaticon.com/128/2943/2943497.png" alt="Public Speaking Icon"><br>
-                    Public Speaking
+                    <img src="https://cdn-icons-png.flaticon.com/128/919/919827.png" alt="HTML Icon"><br>
+                    HTML
                 </div>
                 <div class="skill">
-                    <img src="https://cdn-icons-png.flaticon.com/128/3616/3616952.png" alt="Digital Marketing Icon"><br>
-                    Digital Marketing
+                    <img src="https://cdn-icons-png.flaticon.com/128/919/919826.png" alt="CSS Icon"><br>
+                    CSS
                 </div>
                 <div class="skill">
-                    <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="Data Management Icon"><br>
-                    Data Management
+                    <img src="https://cdn-icons-png.flaticon.com/128/919/919828.png" alt="JavaScript Icon"><br>
+                    JavaScript
                 </div>
                 <div class="skill">
-                    <img src="https://cdn-icons-png.flaticon.com/128/3576/3576274.png" alt="Writing & Documentation Icon"><br>
-                    Writing & Documentation
+                    <img src="https://cdn-icons-png.flaticon.com/128/919/919832.png" alt="Python Icon"><br>
+                    Python
                 </div>
                 <div class="skill">
-                    <img src="https://cdn-icons-png.flaticon.com/128/3177/3177440.png" alt="Leadership Icon"><br>
-                    Leadership
+                    <img src="https://cdn-icons-png.flaticon.com/128/6132/6132221.png" alt="ColdFusion Icon"><br>
+                    ColdFusion
                 </div>
             </div>
-        </div>
 
-        <!-- Right-aligned "Other Skills" Box -->
-        <aside class="other-skills">
-            <h2>Other Skills</h2>
-            <ul>
-                <li>Windows 10</li>
-                <li>Photoshop</li>
-                <li>Excel</li>
-                <li>SQL</li>
-                <li>C++</li>
-                <li>Microsoft Word</li>
-            </ul>
-        </aside>
+            <!-- Right-aligned "Other Skills" Box -->
+            <aside class="other-skills">
+                <h2>Other Skills</h2>
+                <ul>
+                    <li>Windows 10</li>
+                    <li>Photoshop</li>
+                    <li>Excel</li>
+                    <li>SQL</li>
+                    <li>C++</li>
+                    <li>Microsoft Word</li>
+                </ul>
+            </aside>
+        </div>
     </div>
 
 </body>
