@@ -4,7 +4,7 @@
     <title>Skills</title>
     <style>
         body {
-            background-color: #ffffff; /* White background */
+            background-color: #5d8484; /* Matching background */
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -13,6 +13,7 @@
             text-align: left;
             background-color: #6d8ece; /* Blue navigation */
             padding: 10px;
+            width: 100%;
         }
         nav a {
             color: white;
@@ -45,19 +46,28 @@
             width: 50px; /* Adjust icon size */
             height: auto;
         }
-        /* Sidebar Styling */
-        aside {
-            width: 250px;
-            background-color: #2c3e64; /* Dark blue sidebar */
+        /* Styling for the "Other Skills" box */
+        .other-skills {
+            width: 70%; /* Makes it wide like the reference */
+            background-color: #2c3e64; /* Dark blue background */
             color: white;
-            padding: 15px;
-            margin: 20px;
+            padding: 20px;
+            margin: 20px auto; /* Center it horizontally */
             border-radius: 10px; /* Curved corners */
             text-align: left;
         }
-        aside h2 {
+        .other-skills h2 {
             color: white;
             font-size: 18px;
+        }
+        .other-skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .other-skills ul li {
+            color: white;
+            font-size: 16px;
+            padding: 5px 0;
         }
     </style>
     <link rel="stylesheet" href="style.css">
@@ -97,18 +107,18 @@
         </div>
     </div>
 
-    <!-- Sidebar for Other Skills -->
-    <aside>
+    <!-- Wide "Other Skills" Box -->
+    <div class="other-skills">
         <h2>Other Skills</h2>
         <ul>
-            <li>Cross-Cultural Communication</li>
-            <li>Research & Analysis</li>
-            <li>Team Management</li>
-            <li>Team Collaboration</li>
-            <li>Graphic Design</li>
-            <li>Critical Thinking</li>
+            <li>Windows 10</li>
+            <li>Photoshop</li>
+            <li>Excel</li>
+            <li>SQL</li>
+            <li>C++</li>
+            <li>Microsoft Word</li>
         </ul>
-    </aside>
+    </div>
 
 </body>
 </html>
