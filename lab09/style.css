@@ -9,8 +9,12 @@ body {
     background-color: #84a59d;
 }
 
-p, ul, table{
+p, table{
     color: #583101;
+}
+
+ul{
+    color:#62bfed
 }
 
 a {
@@ -161,29 +165,3 @@ input[type="checkbox"] {
 }
 
 
-table {
-    width: 60%;
-    margin: 0 auto; /* Center the table */
-    border-collapse: collapse;
-}
-th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: center;
-}
-th {
-    background-color: white;
-    font-weight: bold;
-}
-h1 {
-    text-align: center;
-}
-p {
-    text-align: center;
-    font-size: 16px;
-}
-/* Alternating row colors */
-.highlight {
-    background-color: #e07450; /* Orange shade similar to the image */
-    color: black;
-}
