@@ -4,8 +4,23 @@
     <title>Skills</title>
     <style>
         body {
-            background-color: #5d8484; /* Matching background */
+            background-color: #5d8484; /* Matching background color */
             font-family: Arial, sans-serif;
+        }
+        table {
+            width: 70%;
+            margin: 20px auto; /* Center the table */
+            border-collapse: collapse;
+            background-color: white;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: white;
+            font-weight: bold;
         }
         h1 {
             text-align: center;
@@ -16,18 +31,10 @@
             font-size: 16px;
             color: white;
         }
-        .skills-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .skill {
-            display: inline-block;
-            margin: 15px;
-            text-align: center;
-        }
-        .skill img {
-            width: 50px; /* Adjust the size of icons */
-            height: auto;
+        /* Alternating row colors */
+        .highlight {
+            background-color: #e07450; /* Orange background */
+            color: black;
         }
     </style>
     <link rel="stylesheet" href="style.css">
@@ -40,32 +47,68 @@
         <a href="contact.html" style="color: white; text-decoration: none; font-weight: bold; margin: 0 15px;">Contact</a>
     </nav>
 
-    <h1>Technical Skills</h1>
+    <h1>Personalized Skills</h1>
 
-    <p>My career has been focused on web development, and I’ve consistently learned new frameworks and languages as technology evolves. Below are my core skills.</p>
+    <p>Below is a list of my skills, proficiency levels, and their applications.</p>
 
-    <div class="skills-container">
-        <div class="skill">
-            <img src="https://cdn-icons-png.flaticon.com/128/919/919827.png" alt="HTML Icon"><br>
-            HTML
-        </div>
-        <div class="skill">
-            <img src="https://cdn-icons-png.flaticon.com/128/919/919826.png" alt="CSS Icon"><br>
-            CSS
-        </div>
-        <div class="skill">
-            <img src="https://cdn-icons-png.flaticon.com/128/919/919828.png" alt="JavaScript Icon"><br>
-            JavaScript
-        </div>
-        <div class="skill">
-            <img src="https://cdn-icons-png.flaticon.com/128/919/919832.png" alt="Python Icon"><br>
-            Python
-        </div>
-        <div class="skill">
-            <img src="https://cdn-icons-png.flaticon.com/128/6132/6132221.png" alt="ColdFusion Icon"><br>
-            ColdFusion
-        </div>
-    </div>
+    <table>
+        <caption>Personalized Skills</caption>
+        <tr>
+            <th>Skills</th>
+            <th>Proficiency Level</th>
+            <th>Application</th>
+        </tr>
+        <tr class="highlight">
+            <td>Public Speaking</td>
+            <td>Intermediate</td>
+            <td>Presentations, Pecha Kucha, Group Projects</td>
+        </tr>
+        <tr>
+            <td>Cross-Cultural Communication</td>
+            <td>Advanced</td>
+            <td>International Student Experience, K-pop Research, Tourism Projects</td>
+        </tr>
+        <tr class="highlight">
+            <td>Research & Analysis</td>
+            <td>Advanced</td>
+            <td>Cultural Studies, South African Tourism Project</td>
+        </tr>
+        <tr>
+            <td>Digital Marketing</td>
+            <td>Intermediate</td>
+            <td>Information Management & Tech Studies, Tourism Brochure</td>
+        </tr>
+        <tr class="highlight">
+            <td>Team Collaboration</td>
+            <td>Advanced</td>
+            <td>Group Presentations, Small Group Communication Course</td>
+        </tr>
+        <tr>
+            <td>Graphic Design</td>
+            <td>Beginner-Intermediate</td>
+            <td>Travel Brochure, eVTOL Manual</td>
+        </tr>
+        <tr class="highlight">
+            <td>Data Management</td>
+            <td>Beginner</td>
+            <td>Database Management Systems Course</td>
+        </tr>
+        <tr>
+            <td>Writing & Documentation</td>
+            <td>Advanced</td>
+            <td>Academic Papers, Instruction Manual, Project Reports</td>
+        </tr>
+        <tr class="highlight">
+            <td>Critical Thinking</td>
+            <td>Advanced</td>
+            <td>Cultural Appropriation Analysis, Tourism Project</td>
+        </tr>
+        <tr>
+            <td>Leadership</td>
+            <td>Intermediate</td>
+            <td>Leading Group Discussions, Organizing Projects</td>
+        </tr>
+    </table>
 
 </body>
 </html>
