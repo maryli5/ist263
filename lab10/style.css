@@ -70,20 +70,21 @@ footer {
 }
 
 .float-left {
-    width: 250px; /* Increase image width */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+    height: auto;
     margin-right: 30px;
     border-radius: 10px;
 }
 
 
-.text-right {
-    text-align: right;
-    flex: 1;
-    font-size: 18px; /* Reduce text size */
-    line-height: 1.6; /* Improve readability */
-    max-width: 70%; /* Prevents text from stretching too wide */
+
+.float-left {
+    max-width: 100%;
+    height: auto;
+    margin-right: 30px;
+    border-radius: 10px;
 }
+
 
 /* Main Contact Page Container */
 .contact-container {
