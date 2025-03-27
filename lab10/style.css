@@ -72,9 +72,10 @@ footer {
 .float-left {
     width: 250px; /* Increase image width */
     height: auto; /* Maintain aspect ratio */
-    margin-right: 30px; /* Increase spacing between image and text */
-    border-radius: 10px; /* Optional: softens corners */
+    margin-right: 30px;
+    border-radius: 10px;
 }
+
 
 .text-right {
     text-align: right;
@@ -164,8 +165,4 @@ input[type="checkbox"] {
     height: 16px;
 }
 
-.responsive-img {
-    max-width: 100%;
-    height: auto;
-}
 
