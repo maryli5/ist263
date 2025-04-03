@@ -1,61 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Shell Game (Alert Version)</title>
+    <meta charset="UTF-8">
+    <title>Shell Game – Alert Version</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
 
-  <style>
-    .container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-bottom: 20px;
-    }
-
-    #first, #second, #third {
-      width: 150px;
-      height: auto;
-      cursor: pointer;
-    }
-
-    #messageArea {
-      text-align: center;
-      font-size: 1.5em;
-      font-weight: bold;
-    }
-  </style>
+        #first, #second, #third {
+            width: 150px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body onload="ShuffleShells();">
 
-  <h1 style="text-align:center;">Shell Game (Alert Version)</h1>
+    <h1>Choose a Walnut</h1>
 
-  <div class="container">
-    <img id="first" src="../images/walnut.png" onclick="WinnerMessage();" alt="Shell 1">
-    <img id="second" src="../images/walnut.png" onclick="TryAgain();" alt="Shell 2">
-    <img id="third" src="../images/walnut.png" onclick="TryAgain();" alt="Shell 3">
-  </div>
+    <div class="container">
+        <img src="../images/walnut.png" alt="first walnut" id="first" onclick="WinnerMessage();">
+        <img src="../images/walnut.png" alt="second walnut" id="second" onclick="TryAgain();">
+        <img src="../images/walnut.png" alt="third walnut" id="third" onclick="TryAgain();">
+    </div>
 
-  <script>
-    // Displays an alert if the user wins
-    function WinnerMessage() {
-      alert("You Won!");
-    }
+    <script>
+        function WinnerMessage() {
+            alert("You Won!");
+        }
 
-    // Displays an alert if the user loses
-    function TryAgain() {
-      alert("Wrong Shell - Try Again");
-    }
+        function TryAgain() {
+            alert("Wrong Shell - Try Again");
+        }
 
-    // Shuffles the shell positions using flexbox order
-    function ShuffleShells() {
-      let order = [1, 2, 3];
-      order.sort(() => Math.random() - 0.5);
+        function ShuffleShells() {
+            let order = [1, 2, 3];
+            order.sort(() => Math.random() - 0.5);
 
-      document.getElementById("first").style.order = order[0];
-      document.getElementById("second").style.order = order[1];
-      document.getElementById("third").style.order = order[2];
-    }
-  </script>
+            document.getElementById("first").style.order = order[0];
+            document.getElementById("second").style.order = order[1];
+            document.getElementById("third").style.order = order[2];
+        }
+    </script>
 
 </body>
 </html>
