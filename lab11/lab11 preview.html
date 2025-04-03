@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shell Game</title>
+
+  <!-- Link to animate2.css -->
+  <link rel="stylesheet" href="animate2.css">
+
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    #first, #second, #third {
+      width: 150px;
+      height: auto;
+      cursor: pointer;
+    }
+
+    #messageArea {
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body onload="ShuffleShells();">
+
+  <h1 style="text-align:center;">Shell Game</h1>
+
+  <div class="container">
+    <img id="first" class="first" src="../images/walnut.png" onclick="WinnerMessage();" alt="Shell 1">
+    <img id="second" class="second" src="../images/walnut.png" onclick="TryAgain();" alt="Shell 2">
+    <img id="third" class="third" src="../images/walnut.png" onclick="TryAgain();" alt="Shell 3">
+  </div>
+
+  <div id="messageArea"></div>
+
+  <script>
+    function WinnerMessage() {
+      document.getElementById("messageArea").innerHTML = "You Won!";
+    }
+
+    function TryAgain() {
+      document.getElementById("messageArea").innerHTML = "Wrong Shell - Try Again";
+    }
+
+    function ShuffleShells() {
+      let order = [1, 2, 3];
+      order.sort(() => Math.random() - 0.5);
+
+      document.getElementById("first").style.order = order[0];
+      document.getElementById("second").style.order = order[1];
+      document.getElementById("third").style.order = order[2];
+    }
+  </script>
+
+</body>
+</html>
