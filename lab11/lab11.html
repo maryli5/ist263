@@ -2,10 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Shell Game</title>
-
-  <!-- Link to animate2.css -->
-  <link rel="stylesheet" href="animate2.css">
+  <title>Shell Game (Alert Version)</title>
 
   <style>
     .container {
@@ -30,25 +27,26 @@
 </head>
 <body onload="ShuffleShells();">
 
-  <h1 style="text-align:center;">Shell Game</h1>
+  <h1 style="text-align:center;">Shell Game (Alert Version)</h1>
 
   <div class="container">
-    <img id="first" class="first" src="../images/walnut.png" onclick="WinnerMessage();" alt="Shell 1">
-    <img id="second" class="second" src="../images/walnut.png" onclick="TryAgain();" alt="Shell 2">
-    <img id="third" class="third" src="../images/walnut.png" onclick="TryAgain();" alt="Shell 3">
+    <img id="first" src="../images/walnut.png" onclick="WinnerMessage();" alt="Shell 1">
+    <img id="second" src="../images/walnut.png" onclick="TryAgain();" alt="Shell 2">
+    <img id="third" src="../images/walnut.png" onclick="TryAgain();" alt="Shell 3">
   </div>
 
-  <div id="messageArea"></div>
-
   <script>
+    // Displays an alert if the user wins
     function WinnerMessage() {
-      document.getElementById("messageArea").innerHTML = "You Won!";
+      alert("You Won!");
     }
 
+    // Displays an alert if the user loses
     function TryAgain() {
-      document.getElementById("messageArea").innerHTML = "Wrong Shell - Try Again";
+      alert("Wrong Shell - Try Again");
     }
 
+    // Shuffles the shell positions using flexbox order
     function ShuffleShells() {
       let order = [1, 2, 3];
       order.sort(() => Math.random() - 0.5);
