@@ -58,9 +58,10 @@ body {
   }
   
   /* Show Mercury only */
-  #mecury {
+  #mercury {
     display: block;
   }
+  
   #mercuryInfo {
     display: block;
   }
