@@ -1,67 +1,77 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
   }
   
   h1 {
-    text-align: center;
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 10px;
   }
   
   .slideshow {
-    width: 700px;
-    margin: 0 auto;
+    display: flex;
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #000;
   }
   
   .planetDisplay {
-    float: left;
-    width: 300px;
+    width: 50%;
   }
   
   .planetText {
-    float: left;
-    width: 400px;
-    padding-left: 20px;
+    width: 50%;
+    padding-left: 30px;
   }
   
   .planetImage {
     display: none;
     width: 100%;
-    height: auto;
-    border: 2px solid #ddd;
-    border-radius: 10px;
+    border-radius: 8px;
+    border: 2px solid #444;
   }
   
   .planetText > div {
     display: none;
-    font-size: 16px;
-    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .planetText > div strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
   }
   
   .thumbnails {
-    clear: both;
-    margin-top: 40px;
     text-align: center;
+    margin-top: 30px;
   }
   
   .thumbnails img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     object-fit: cover;
     margin: 5px;
     cursor: pointer;
+    border-radius: 50%;
     border: 2px solid transparent;
-    border-radius: 8px;
+    transition: border 0.2s;
   }
   
   .thumbnails img:hover {
-    border-color: #999;
+    border-color: #888;
   }
   
-  /* Show Mercury only */
+  /* Show Mercury by default */
   #mercury {
     display: block;
   }
-  
   #mercuryInfo {
     display: block;
   }
