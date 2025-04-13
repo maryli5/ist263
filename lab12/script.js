@@ -1,22 +1,50 @@
 function showPlanet(planet) {
-  // Remove active classes
-  document.querySelectorAll('.planet-img, .planet-text, .thumbnail').forEach(el => {
-      el.classList.remove('active');
-  });
+  // Remove all active states
+  const allElements = document.querySelectorAll('.active');
+  allElements.forEach(el => el.classList.remove('active'));
 
-  // Add active classes to selected planet
-  document.getElementById(planet).classList.add('active');
-  document.getElementById(`${planet}Info`).classList.add('active');
-  document.querySelector(`[onclick="showPlanet('${planet}')"]`).classList.add('active');
+  // Add active class to selected planet
+  const planetElement = document.getElementById(planet);
+  const textElement = document.getElementById(`${planet}Info`);
+  const thumbElement = document.querySelector(`[onclick="showPlanet('${planet}')"]`);
 
-  // Scroll to selected thumbnail
-  const activeThumb = document.querySelector(`.thumbnail.active`);
-  activeThumb.scrollIntoView({
+  // Add active classes with delay for animation
+  setTimeout(() => {
+      planetElement.classList.add('active');
+      textElement.classList.add('active');
+      thumbElement.classList.add('active');
+  }, 50);
+
+  // Scroll to active thumbnail
+  thumbElement.scrollIntoView({
       behavior: 'smooth',
       block: 'nearest',
       inline: 'center'
   });
+
+  // Add planetary glow effect
+  const glowColor = getComputedStyle(thumbElement).borderColor;
+  planetElement.style.boxShadow = `0 0 50px ${glowColor}`;
+  setTimeout(() => {
+      planetElement.style.boxShadow = 'none';
+  }, 1000);
 }
 
 // Initialize with Mercury
-window.onload = () => showPlanet('mercury');
+window.onload = () => {
+  showPlanet('mercury');
+  // Add keyboard navigation
+  document.addEventListener('keydown', (e) => {
+      const planets = ['mercury','venus','earth','mars','jupiter','saturn','uranus','neptune'];
+      const currentIndex = planets.indexOf(document.querySelector('.planet-img.active').id);
+      
+      if(e.key === 'ArrowRight') {
+          const nextIndex = (currentIndex + 1) % planets.length;
+          showPlanet(planets[nextIndex]);
+      }
+      if(e.key === 'ArrowLeft') {
+          const prevIndex = (currentIndex - 1 + planets.length) % planets.length;
+          showPlanet(planets[prevIndex]);
+      }
+  });
+};
