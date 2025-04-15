@@ -1,5 +1,5 @@
 
-/* Base Reset */
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,16 +7,16 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #fefefe;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff8f0;
   color: #333;
-  padding: 10px;
+  line-height: 1.6;
+  padding: 15px;
 }
 
 /* Header and Navigation */
 header {
-  background-color: #4caf50;
+  background-color: #fa824c;
   color: white;
   padding: 20px;
   text-align: center;
@@ -26,88 +26,83 @@ nav ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  list-style: none;
+  list-style-type: none;
   margin-top: 10px;
 }
 
-nav ul li {
-  margin: 0 10px;
+nav li {
+  margin: 5px 10px;
 }
 
-nav ul li a {
+nav a {
   color: white;
   text-decoration: none;
-  padding: 10px;
-  display: block;
-}
-
-nav ul li a:hover {
-  background-color: #388e3c;
+  padding: 8px 12px;
   border-radius: 5px;
+  background-color: #f4a261;
 }
 
-/* Main Layout using Flexbox */
+nav a:hover {
+  background-color: #e76f51;
+}
+
+/* Main Content */
 main {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding: 20px;
+  gap: 40px;
+  margin-top: 20px;
 }
 
+/* Recipe Sections */
 section {
-  background: #ffffff;
+  background-color: #fff;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
+section h2 {
+  color: #2a9d8f;
+  margin-bottom: 10px;
+}
+
+section p,
+section li {
+  margin-bottom: 10px;
+}
+
+/* Recipe Instructions */
+ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+ol li {
+  margin-bottom: 15px;
+}
+
 section img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 600px;
   height: auto;
-  margin: 10px 0;
-}
-
-/* Form Styles */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
-}
-
-input[type="email"] {
-  padding: 8px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button {
-  padding: 10px;
-  font-size: 16px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #388e3c;
+  display: block;
+  margin-top: 10px;
+  border-radius: 8px;
 }
 
 /* Responsive Design */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   nav ul {
     flex-direction: column;
     align-items: center;
   }
 
-  body {
-    padding: 5px;
-  }
-
   main {
     padding: 10px;
+  }
+
+  section img {
+    max-width: 100%;
   }
 }
