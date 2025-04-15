@@ -91,6 +91,33 @@ section img {
   border-radius: 8px;
 }
 
+
+.recipe-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.recipe-img {
+  flex: 1 1 300px;
+}
+
+.recipe-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.recipe-content {
+  flex: 2 1 400px;
+}
+
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   nav ul {
@@ -105,4 +132,13 @@ section img {
   section img {
     max-width: 100%;
   }
+
+  .recipe-box {
+    flex-direction: column;
+  }
+
+  .recipe-content, .recipe-img {
+    flex: 1 1 100%;
+  }
 }
+
