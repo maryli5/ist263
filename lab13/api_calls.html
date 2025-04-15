@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iPhone Weather App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        color: #222;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 375px; /* typical iPhone screen width */
+        background: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        border-radius: 15px;
+      }
+
+      button {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+        margin-bottom: 15px;
+        background-color: #0066cc;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #004d99;
+      }
+
+      img#icon {
+        width: 100px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      p {
+        font-size: 18px;
+        text-align: center;
+        margin: 10px 0;
+      }
+    </style>
+    <script>
+      const cuseTempAPI = "https://api.weather.gov/gridpoints/BGM/52,99/forecast";
+      function getSyracuseTemp() {
+        fetch(cuseTempAPI)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            time = new Date(data.properties.periods[0].startTime).toLocaleString();
+            temp = data.properties.periods[0].temperature;
+            forecast = data.properties.periods[0].detailedForecast;
+            icon = data.properties.periods[0].icon;
+
+            document.getElementById("icon").setAttribute("src", icon);
+            document.getElementById("icon").setAttribute("alt", "Weather icon");
+
+            document.getElementById("time").innerHTML = time;
+            document.getElementById("temp").innerHTML = temp + "°F";
+            document.getElementById("forecast").innerHTML = forecast;
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+
+      function getCurrentDate() {
+        const time = new Date();
+        const formattedDate = time.toLocaleDateString("en-US");
+        document.getElementById("date").innerHTML = formattedDate;
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <button onclick="getSyracuseTemp()">Get Syracuse Weather</button>
+      <img id="icon" src="" alt="Weather icon" />
+      <p id="time"></p>
+      <p id="temp"></p>
+      <p id="forecast"></p>
+
+      <button onclick="getCurrentDate()">Get Today's Date</button>
+      <p id="date"></p>
+    </div>
+  </body>
+</html>
