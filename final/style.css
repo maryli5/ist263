@@ -92,3 +92,14 @@ body {
     align-items: center;
   }
 }
+
+.site-footer {
+  background-color: #fa824c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  border-top: 4px solid #f4a261;
+}
+
