@@ -2,12 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Quick & Healthy Recipes</title>
+  <title>Meal Prep Tips & Kitchen Hacks</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .accordion {
+      margin: 10px 0;
+      border: none;
+      outline: none;
+      background-color: #f4a261;
+      color: white;
+      cursor: pointer;
+      padding: 15px 20px;
+      width: 100%;
+      text-align: left;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+      border-radius: 8px;
+    }
+
+    .accordion::after {
+      content: '\25BC';
+      float: right;
+      transition: transform 0.3s ease;
+    }
+
+    .accordion.active::after {
+      transform: rotate(180deg);
+    }
+
+    .panel {
+      padding: 0 20px;
+      background-color: #fff8f0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      border-left: 3px solid #f4a261;
+      border-radius: 0 0 8px 8px;
+      margin-bottom: 15px;
+    }
+  </style>
 </head>
 <body>
   <header class="page-header">
-    <h1>Quick & Healthy Recipes</h1>
+    <h1>Meal Prep Tips & Kitchen Hacks</h1>
     <nav class="nav-buttons">
       <a class="nav-button" href="index.html">Home</a>
       <a class="nav-button" href="recipes.html">Recipes</a>
@@ -16,87 +53,68 @@
   </header>
 
   <main>
-    <div class="recipe-grid">
+    <button class="accordion">📅 Step 1: Plan Your Week</button>
+    <div class="panel">
+      <img src="../project/plan.jpg" alt="Meal plan and grocery list" width="400">
+      <p>Start by outlining your meals for the week. Use a planner or template to assign meals to each day and make a matching grocery list.</p>
+      <ul>
+        <li>✅ Pick 2 proteins, 2 carbs, 3 vegetables to rotate.</li>
+        <li>✅ Consider your schedule and plan for busy nights.</li>
+        <li>✅ Stick to recipes that share ingredients.</li>
+      </ul>
+      <a href="#">📄 Download Weekly Meal Planner</a>
+    </div>
 
-      <section class="recipe-card">
-        <h2>🥑 Avocado Toast with Egg</h2>
-        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Avocado toast">
-        <p><strong>Ingredients:</strong> Bread, avocado, egg, salt, pepper</p>
-        <ol>
-          <li>Toast the bread.</li>
-          <li>Mash avocado with salt and pepper.</li>
-          <li>Fry an egg sunny side up.</li>
-          <li>Assemble and enjoy.</li>
-        </ol>
-      </section>
+    <button class="accordion">🍲 Step 2: Batch Cooking Basics</button>
+    <div class="panel">
+      <img src="https://images.pexels.com/photos/6208085/pexels-photo-6208085.jpeg" alt="Batch cooking setup" width="400">
+      <p>Batch cooking is the ultimate time-saver. Choose a weekend day or evening to prepare several meals at once.</p>
+      <ul>
+        <li>🍗 Roast a sheet pan of chicken, tofu, or tempeh.</li>
+        <li>🥦 Steam or roast large batches of vegetables.</li>
+        <li>🍚 Cook grains like rice or quinoa in bulk.</li>
+        <li>🥘 Prepare soups, stews, or casseroles to divide into containers.</li>
+        <li>❄️ Freeze leftovers in labeled containers for future use.</li>
+      </ul>
+    </div>
 
-      <section class="recipe-card">
-        <h2>🍌 Overnight Oats</h2>
-        <img src="https://images.pexels.com/photos/1640771/pexels-photo-1640771.jpeg" alt="Overnight oats">
-        <p><strong>Ingredients:</strong> Oats, milk, chia seeds, honey, berries</p>
-        <ol>
-          <li>Combine ingredients in a jar.</li>
-          <li>Mix and seal.</li>
-          <li>Refrigerate overnight.</li>
-          <li>Top with berries and serve.</li>
-        </ol>
-      </section>
+    <button class="accordion">🛠 Step 3: Kitchen Time-Savers</button>
+    <div class="panel">
+      <img src="https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg" alt="Cut vegetables in containers" width="400">
+      <p>Make your cooking routine more efficient with these tips:</p>
+      <ul>
+        <li>🔪 Buy pre-cut or frozen vegetables to skip prep time.</li>
+        <li>⌛ Use appliances like a rice cooker, Instant Pot, or air fryer.</li>
+        <li>🍽 Choose one-pot or one-pan recipes to reduce cleanup.</li>
+        <li>🧽 Clean as you go — wipe counters and wash dishes while things cook.</li>
+      </ul>
+    </div>
 
-      <section class="recipe-card">
-        <h2>🍓 Berry Smoothie</h2>
-        <img src="https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg" alt="Berry smoothie">
-        <p><strong>Ingredients:</strong> Yogurt, berries, almond milk, honey</p>
-        <ol>
-          <li>Add all ingredients to blender.</li>
-          <li>Blend until smooth.</li>
-          <li>Pour and enjoy.</li>
-        </ol>
-      </section>
-
-      <section class="recipe-card">
-        <h2>🍤 Garlic Shrimp & Veggies</h2>
-        <img src="https://images.pexels.com/photos/357743/pexels-photo-357743.jpeg" alt="Garlic shrimp and veggies">
-        <p><strong>Ingredients:</strong> Shrimp, garlic, broccoli, peppers, oil</p>
-        <ol>
-          <li>Chop veggies and roast at 400°F.</li>
-          <li>Sauté garlic and shrimp in pan.</li>
-          <li>Combine and serve.</li>
-        </ol>
-      </section>
-
-      <section class="recipe-card">
-        <h2>🐟 Lemon Garlic Salmon</h2>
-        <img src="https://images.pexels.com/photos/236798/pexels-photo-236798.jpeg" alt="Lemon garlic salmon">
-        <p><strong>Ingredients:</strong> Salmon, lemon, garlic, butter, asparagus</p>
-        <ol>
-          <li>Place salmon on tray with asparagus.</li>
-          <li>Top with lemon, garlic, butter.</li>
-          <li>Bake at 400°F for 20 minutes.</li>
-        </ol>
-      </section>
-
-      <section class="recipe-card">
-        <h2>🍲 One-Pot Chicken & Quinoa</h2>
-        <img src="https://images.pexels.com/photos/3992192/pexels-photo-3992192.jpeg" alt="Chicken quinoa dish">
-        <p><strong>Ingredients:</strong> Chicken, quinoa, broth, vegetables, spinach</p>
-        <ol>
-          <li>Sauté chicken and veggies.</li>
-          <li>Add quinoa and broth.</li>
-          <li>Simmer until cooked and stir in spinach.</li>
-        </ol>
-      </section>
-
-      <section class="recipe-card">
-        <h2>🌱 Veggie Stir-Fry</h2>
-        <img src="https://images.pexels.com/photos/1640775/pexels-photo-1640775.jpeg" alt="Veggie stir-fry">
-        <p><strong>Ingredients:</strong> Mixed veggies, soy sauce, sesame oil, garlic</p>
-        <ol>
-          <li>Prep and sauté veggies with garlic and oil.</li>
-          <li>Add soy sauce and stir-fry until tender.</li>
-        </ol>
-      </section>
-
+    <button class="accordion">🎯 Final Tip: Start Small</button>
+    <div class="panel">
+      <p>Don’t feel overwhelmed — even prepping breakfast or lunch for a couple of days can have a big impact. Over time, you’ll develop a system that works for you.</p>
+      <h3>Want More Meal Prep Ideas?</h3>
+      <form>
+        <label for="email">📩 Enter your email to subscribe:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        <button type="submit">Subscribe</button>
+      </form>
     </div>
   </main>
+
+  <script>
+    const acc = document.querySelectorAll(".accordion");
+    acc.forEach(button => {
+      button.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
 </body>
 </html>
